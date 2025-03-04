@@ -1,0 +1,18 @@
+# Ignorar banco de dados SQLite
+db.sqlite3
+
+# Ignorar arquivos de compilação do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivo de configuração do ambiente
+.env
+
+# Ignorar arquivos de IDEs
+.idea/
+.vscode/
+
+# Docs
+docs.txt
