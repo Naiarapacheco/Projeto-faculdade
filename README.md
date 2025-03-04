@@ -19,7 +19,7 @@ Este é um projeto acadêmico desenvolvido com o framework Django, focado na cri
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/nome-do-repositorio.git
+   git clone https://github.com/Naiarapacheco/Projeto-faculdade.git
 
 2. Instale as dependências:
     pip install -r requirements.txt
