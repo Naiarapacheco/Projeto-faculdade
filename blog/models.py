@@ -1,5 +1,13 @@
 from django.db import models
 
+class Category(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField()
+
+    class Meta:
+        ordering = ('title',)
+        verbose_name_plural = 'Categories'
+        
 class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
