@@ -1,5 +1,0 @@
-- Nao criei venv
-Criando projeto:
-    pip install django
-
-django-admin startproject lab_ideas
