@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{category.title}}{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+        
+            {% for post in category.posts.all %}
+            <div class="content is-medium mb-6">
+                <a href="{% url 'post_detail' post.category.slug post.slug %}" class="block">
+
+                    <h2 class="subtitle is-size-6 tag is-info is-light">
+                        {{post.created_at|timesince}} atrás
+                    </h2>
+                    <h1 class="title is-size-3">{{post.title}}</h1>
+                    <p>{{post.intro}}</p>
+                </a>
+            </div>
+
+            {% empty %}
+            <p class="has-text-centered">Nenhum post encontrado.</p>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+{% endblock %}
