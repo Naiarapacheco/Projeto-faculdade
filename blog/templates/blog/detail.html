@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Detalhe{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+
+            <!-- Post Title -->
+            <h1 class="title is-4 mb-5">{{post.title}}</h1>
+
+            <!-- Post Content -->
+            <p class="subtitle is-5 mb-2">{{post.intro}}</p>
+            <div class="my-8">
+                <p class="md:text-base">{{post.body|safe}}</p>
+            </div>
+            
+            <!-- Comments Section -->
+            {% if post.comments.all %}
+            <div class="my-8">
+                <h2 class="text-lg md:text-xl font-semibold mb-4">Comentários</h2>
+                {% for comment in post.comments.all %}
+                <article class="box mb-6">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-sm">{{ comment.name }} <small>{{ comment.created_at|timesince }} atrás</small></p>
+
+                            <a href="" class="button is-small">
+                                <i class="ri-delete-bin-line"></i>
+                            </a>
+
+                        </div>
+                        <p>{{ comment.body }}</p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+            {% else %}
+            <p class="has-text-centered">Nenhum comentário ainda.</p>
+            {% endif %}
+
+            <!-- Comment Form -->
+            <div class="my-8">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="field flex justify-center mt-4">
+                        <button type="submit" class="button">
+                            Envie seu comentário
+                        </button>
+                    </div>
+                </form>
+                
+                {% for comment in post.comments.all %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
