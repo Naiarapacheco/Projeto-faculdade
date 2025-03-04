@@ -1,6 +1,6 @@
 from django.db import models
 
-class Posts(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
     intro = models.TextField()
