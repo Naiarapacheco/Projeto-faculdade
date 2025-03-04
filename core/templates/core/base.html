@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lab Ideas | {% block title %}{% endblock %}</title>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <header class="shadow-md">
+        <div class="container mx-auto p-5 flex justify-between">
+            <a href="/" class="text-xl lg:text-2xl font-bold">
+                Lab Ideas
+            </a>
+
+            <form method="get" action="">
+                <div class="control has-icons-right">
+                    <input class="input is-rounded" type="text" placeholder="Digite..." name="">
+                    <span class="icon is-right">
+                        <i class="ri-search-line"></i>
+                    </span>
+                </div>
+            </form>
+
+            <a href="/" class="text-lg lg:text-xl font-bold">
+                Home
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto flex-grow">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="p-12 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <p class="font-semibold">
+                Copyright &copy; 2025 - Lab Ideas
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
