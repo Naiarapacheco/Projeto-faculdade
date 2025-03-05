@@ -7,7 +7,7 @@ Este é um projeto desenvolvido com o framework Django, focado na criação e ge
 - **Cadastro de Posts**: Criação e edição de posts com título, conteúdo e categoria.
 - **Sistema de Categorias**: Organização dos posts em diferentes categorias.
 - **Sistema de Comentários**: Permite que os usuários interajam com os posts deixando comentários.
-- **Administração Simples**: Painel administrativo integrado para facilitar a gestão de conteúdo.
+- **Administração**: Painel administrativo integrado para facilitar a gestão de conteúdo.
 
 ## Tecnologias Utilizadas
 
