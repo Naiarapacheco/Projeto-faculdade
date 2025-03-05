@@ -1,6 +1,6 @@
 ## Descrição
 
-Este é um projeto acadêmico desenvolvido com o framework Django, focado na criação e gerenciamento de conteúdo para blogs. O site permite a organização de posts em categorias, interação dos usuários através de comentários e administração do conteúdo.
+Este é um projeto desenvolvido com o framework Django, focado na criação e gerenciamento de conteúdo para blogs. O site permite a organização de posts em categorias, interação dos usuários através de comentários e administração do conteúdo.
 
 ## Funcionalidades
 
