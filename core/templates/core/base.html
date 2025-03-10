@@ -14,12 +14,12 @@
     <header class="shadow-md">
         <div class="container mx-auto p-5 flex justify-between">
             <a href="/" class="text-xl lg:text-2xl font-bold">
-                Lab Ideas
+                <i class="ri-lightbulb-flash-line"></i> Lab Ideas
             </a>
 
-            <form method="get" action="">
+            <form method="get" action="{% url 'search' %}">
                 <div class="control has-icons-right">
-                    <input class="input is-rounded" type="text" placeholder="Digite..." name="">
+                    <input class="input is-rounded" type="text" placeholder="Digite algo..." name="query">
                     <span class="icon is-right">
                         <i class="ri-search-line"></i>
                     </span>
@@ -27,7 +27,7 @@
             </form>
 
             <a href="/" class="text-lg lg:text-xl font-bold">
-                Home
+                <i class="ri-home-4-line"></i> Home
             </a>
         </div>
     </header>
@@ -41,6 +41,7 @@
         <div class="container mx-auto text-center">
             <p class="font-semibold">
                 Copyright &copy; 2025 - Lab Ideas
+                <i class="ri-flashlight-fill"></i>            
             </p>
         </div>
     </footer>
