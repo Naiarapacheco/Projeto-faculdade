@@ -1,6 +1,6 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Página Inicial{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
 <section class="section">
@@ -9,7 +9,12 @@
         
             {% for post in posts %}
             <div class="content is-medium mb-6">
-                <a href="{% url 'details' post.slug %}" class="block">
+                <a href="{% url 'post_detail' post.category.slug post.slug %}" class="block">
+                    {% if post.image %}
+                        <figure class="image">
+                            <img src="{{ post.image.url }}">
+                        </figure>
+                    {% endif %}
                     <h2 class="subtitle is-size-6 tag is-info is-light">
                         {{post.created_at|timesince}} atrás
                     </h2>
